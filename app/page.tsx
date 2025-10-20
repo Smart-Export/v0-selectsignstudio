@@ -55,7 +55,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-[#3d5a80]">Select Sign Studio</h1>
             <p className="text-2xl md:text-3xl mb-8 text-[#ee6c4d] font-semibold text-balance">
-              Gifts that Leave a Mark
+              Gifts that Leave a Sign
             </p>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto text-pretty leading-relaxed">
               We create unique 3D magnets and custom metal plates. You choose the idea - we turn it into a handcrafted
