@@ -292,9 +292,7 @@ export default function HomePage() {
               <Handshake className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">B2B Partnerships</h3>
               <p className="text-gray-600">
-                We implement any concept in 3D magnets and metal plates. We collaborate with brands, retailers, and
-                distributors to develop exclusive souvenir collections under your label — from concept and design to
-                full production and packaging.
+                We implement any concept. We collaborate with brands, retailers, and distributors 
               </p>
             </div>
           </div>
