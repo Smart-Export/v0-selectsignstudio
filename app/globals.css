@@ -134,9 +134,21 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Adding gradient background for glassmorphism effect */
+    @apply bg-gradient-to-br from-blue-50 via-white to-orange-50 text-foreground;
   }
   html {
     scroll-behavior: smooth;
+  }
+}
+
+/* Adding glassmorphism utility classes */
+@layer utilities {
+  .glass {
+    @apply bg-white/60 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+
+  .glass-strong {
+    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-xl;
   }
 }

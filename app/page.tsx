@@ -22,6 +22,10 @@ import {
   CheckCircle,
   Star,
   Handshake,
+  Ruler,
+  Leaf,
+  Hand,
+  Globe,
 } from "lucide-react"
 import { useState } from "react"
 import { MagnetCarousel } from "@/components/magnet-carousel"
@@ -46,44 +50,99 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section
-        id="home"
-        className="bg-gradient-to-br from-[#3d5a80] to-[#2d4560] text-white py-20 min-h-[90vh] flex items-center"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 text-balance">Handcrafted 3D Magnets & Metal Plates</h1>
-          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto text-pretty">
-            Transform your ideas into unique souvenirs. We create custom 3D magnets and metal plates that tell your
-            story.
-          </p>
+      <section id="home" className="py-20 min-h-[90vh] flex items-center">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-[#3d5a80]">Select Sign Studio</h1>
+            <p className="text-2xl md:text-3xl mb-8 text-[#ee6c4d] font-semibold text-balance">
+              Gifts that Leave a Mark
+            </p>
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto text-pretty leading-relaxed">
+              We create unique 3D magnets and custom metal plates. You choose the idea - we turn it into a handcrafted
+              product: from memorable magnets to stylish plates for business or home.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                <Ruler className="w-6 h-6 text-[#ee6c4d]" />
+              </div>
+              <div className="text-left">
+                <p className="text-gray-700 leading-relaxed">
+                  Custom design to match your vision - from sketch to finished product
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                <Leaf className="w-6 h-6 text-[#ee6c4d]" />
+              </div>
+              <div className="text-left">
+                <p className="text-gray-700 leading-relaxed">
+                  Eco-friendly and safe materials - we work only with quality raw materials
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                <Hand className="w-6 h-6 text-[#ee6c4d]" />
+              </div>
+              <div className="text-left">
+                <p className="text-gray-700 leading-relaxed">
+                  Handcrafted with soul - each product passes through the hands of a master
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                <Globe className="w-6 h-6 text-[#ee6c4d]" />
+              </div>
+              <div className="text-left">
+                <p className="text-gray-700 leading-relaxed">
+                  Worldwide delivery - from Ukraine to any point in the world
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg">
               <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                 Start Your Design
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-white text-[#3d5a80] hover:bg-gray-100">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-2 border-[#3d5a80] text-[#3d5a80] hover:bg-[#3d5a80] hover:text-white bg-white/60 backdrop-blur-md rounded-full"
+            >
               <a href="#process">See How We Work</a>
             </Button>
           </div>
+
           <div className="mt-12 animate-bounce">
-            <ChevronDown className="w-8 h-8 mx-auto text-white/70" />
+            <ChevronDown className="w-8 h-8 mx-auto text-gray-400" />
           </div>
         </div>
       </section>
 
       {/* 3D Magnets Section */}
-      <section id="magnets-3d" className="py-16 bg-white">
+      <section id="magnets-3d" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-[#3d5a80]">Our Handcrafted 3D Magnets</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
+            <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto text-pretty">
               Each magnet is more than a souvenir. It's an emotion, story, and design created especially for you.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8">
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-[#ee6c4d] flex-shrink-0 mt-0.5" />
@@ -105,7 +164,11 @@ export default function HomePage() {
                 </li>
               </ul>
               <div className="mt-8">
-                <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg w-full"
+                >
                   <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                     Want your own design? Order a Magnet
                   </a>
@@ -120,7 +183,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#ee6c4d] w-16 mx-auto"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#ee6c4d] to-transparent w-full max-w-md mx-auto"></div>
 
       {/* Metal Plates Section */}
       <section id="metal-plates" className="py-16">
@@ -137,7 +200,7 @@ export default function HomePage() {
               <PlateCarousel />
             </div>
 
-            <div>
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8">
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-[#ee6c4d] flex-shrink-0 mt-0.5" />
@@ -166,7 +229,11 @@ export default function HomePage() {
                 </li>
               </ul>
               <div className="mt-8">
-                <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg w-full"
+                >
                   <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                     Create your own plate design now
                   </a>
@@ -177,35 +244,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#ee6c4d] w-16 mx-auto"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#ee6c4d] to-transparent w-full max-w-md mx-auto"></div>
 
       {/* Custom Design Section */}
-      <section id="custom-design" className="py-16 bg-gray-50">
+      <section id="custom-design" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-[#3d5a80]">Individual Design for Your Ideas</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
               <Trophy className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">Unique Brand Collections</h3>
               <p className="text-gray-600">Creating souvenir lines with logo or corporate style</p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
               <Calendar className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">Special Event Series</h3>
               <p className="text-gray-600">Festivals, exhibitions, sports events, corporate holidays</p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
               <Heart className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">Custom Gifts</h3>
               <p className="text-gray-600">Personal magnets or plates with names, dates, favorite places or symbols</p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
               <Palette className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">Thematic Collections</h3>
               <p className="text-gray-600">
@@ -213,7 +280,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
               <Gem className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">Limited Series</h3>
               <p className="text-gray-600">
@@ -221,7 +288,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
               <Handshake className="w-12 h-12 text-[#ee6c4d] mb-4" />
               <h3 className="text-xl font-bold mb-2 text-[#3d5a80]">B2B Partnerships</h3>
               <p className="text-gray-600">
@@ -232,12 +299,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-8 text-center border border-gray-200">
+          <div className="bg-white/70 backdrop-blur-lg border border-white/30 shadow-xl rounded-3xl p-8 text-center">
             <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
               We take your idea, develop visualization, agree on the design with you and only after that start
               production.
             </p>
-            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg">
               <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                 Tell us your idea and we'll make it a memorable souvenir
               </a>
@@ -246,13 +313,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#ee6c4d] w-16 mx-auto"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#ee6c4d] to-transparent w-full max-w-md mx-auto"></div>
 
       {/* Process Section */}
-      <section id="process" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section id="process" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance text-[#3d5a80]">
               From Idea to Finished Souvenir - Our Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
@@ -261,8 +328,7 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-5xl mx-auto space-y-8 mb-16">
-            {/* Step 1 */}
-            <div className="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#ee6c4d]">
+            <div className="flex flex-col md:flex-row items-center gap-8 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8 hover:bg-white/70 hover:shadow-xl transition-all border-l-4 border-l-[#ee6c4d]">
               <div className="relative flex-shrink-0">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ee6c4d] to-[#d85a3a] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
                   1
@@ -277,8 +343,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Step 2 */}
-            <div className="flex flex-col md:flex-row-reverse items-center gap-8 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-r-4 border-[#ee6c4d]">
+            <div className="flex flex-col md:flex-row-reverse items-center gap-8 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8 hover:bg-white/70 hover:shadow-xl transition-all border-r-4 border-r-[#ee6c4d]">
               <div className="relative flex-shrink-0">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ee6c4d] to-[#d85a3a] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
                   2
@@ -293,8 +358,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Step 3 */}
-            <div className="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#ee6c4d]">
+            <div className="flex flex-col md:flex-row items-center gap-8 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8 hover:bg-white/70 hover:shadow-xl transition-all border-l-4 border-l-[#ee6c4d]">
               <div className="relative flex-shrink-0">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ee6c4d] to-[#d85a3a] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
                   3
@@ -309,8 +373,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Step 4 */}
-            <div className="flex flex-col md:flex-row-reverse items-center gap-8 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-r-4 border-[#ee6c4d]">
+            <div className="flex flex-col md:flex-row-reverse items-center gap-8 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8 hover:bg-white/70 hover:shadow-xl transition-all border-r-4 border-r-[#ee6c4d]">
               <div className="relative flex-shrink-0">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ee6c4d] to-[#d85a3a] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
                   4
@@ -325,8 +388,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Step 5 */}
-            <div className="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-[#ee6c4d]">
+            <div className="flex flex-col md:flex-row items-center gap-8 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-3xl p-8 hover:bg-white/70 hover:shadow-xl transition-all border-l-4 border-l-[#ee6c4d]">
               <div className="relative flex-shrink-0">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ee6c4d] to-[#d85a3a] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
                   5
@@ -343,7 +405,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg">
               <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                 See how we work? Order your unique design right now
               </a>
@@ -352,73 +414,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#ee6c4d] w-16 mx-auto"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#ee6c4d] to-transparent w-full max-w-md mx-auto"></div>
 
       {/* Ready to Create Section */}
-      <section className="py-20 bg-gradient-to-br from-[#3d5a80] to-[#2d4560] text-white">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance text-[#3d5a80]">
                 Ready to Create Your Unique Souvenir?
               </h2>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto text-pretty">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty leading-relaxed">
                 Let's discuss your project, develop design and deliver the finished product anywhere in the world.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-10">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
-                    <Package className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                    <Package className="w-6 h-6 text-[#ee6c4d]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Minimum order from 200 pcs</h3>
-                    <p className="text-gray-200 text-sm">for custom collections</p>
+                    <h3 className="font-bold text-lg mb-1 text-[#3d5a80]">Minimum order from 200 pcs</h3>
+                    <p className="text-gray-600 text-sm">for custom collections</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-6 h-6 text-[#ee6c4d]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Fast design development</h3>
-                    <p className="text-gray-200 text-sm">and approval</p>
+                    <h3 className="font-bold text-lg mb-1 text-[#3d5a80]">Fast design development</h3>
+                    <p className="text-gray-600 text-sm">and approval</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-6 h-6 text-[#ee6c4d]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Premium quality</h3>
-                    <p className="text-gray-200 text-sm">handmade and safe materials</p>
+                    <h3 className="font-bold text-lg mb-1 text-[#3d5a80]">Premium quality</h3>
+                    <p className="text-gray-600 text-sm">handmade and safe materials</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
-                    <Star className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-[#ee6c4d]/10 flex items-center justify-center flex-shrink-0">
+                    <Star className="w-6 h-6 text-[#ee6c4d]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Limited series</h3>
-                    <p className="text-gray-200 text-sm">and exclusive design for your brand</p>
+                    <h3 className="font-bold text-lg mb-1 text-[#3d5a80]">Limited series</h3>
+                    <p className="text-gray-600 text-sm">and exclusive design for your brand</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white shadow-lg">
+              <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white shadow-lg rounded-full">
                 <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                   Get Quote
                 </a>
@@ -427,7 +489,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#3d5a80] bg-transparent"
+                className="border-2 border-[#3d5a80] text-[#3d5a80] hover:bg-[#3d5a80] hover:text-white bg-white/60 backdrop-blur-md rounded-full"
               >
                 <a
                   href="https://drive.google.com/drive/folders/1dfFYiOM8wmc-YpUQh8how58BJBu_Zoku?usp=drive_link"
@@ -442,17 +504,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#ee6c4d] w-16 mx-auto"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#ee6c4d] to-transparent w-full max-w-md mx-auto"></div>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 bg-white">
+      <section id="faq" className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-[#3d5a80]">Frequently Asked Questions</h2>
           </div>
 
           <div className="space-y-4">
-            <details className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow group">
+            <details className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all group">
               <summary className="font-bold text-[#3d5a80] cursor-pointer list-none flex items-center justify-between">
                 What's the minimum order for custom magnets and plates?
                 <ChevronDown className="w-5 h-5 text-[#ee6c4d] group-open:rotate-180 transition-transform" />
@@ -462,7 +524,7 @@ export default function HomePage() {
               </p>
             </details>
 
-            <details className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow group">
+            <details className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all group">
               <summary className="font-bold text-[#3d5a80] cursor-pointer list-none flex items-center justify-between">
                 How long does design development and delivery take?
                 <ChevronDown className="w-5 h-5 text-[#ee6c4d] group-open:rotate-180 transition-transform" />
@@ -472,7 +534,7 @@ export default function HomePage() {
               </p>
             </details>
 
-            <details className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow group">
+            <details className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all group">
               <summary className="font-bold text-[#3d5a80] cursor-pointer list-none flex items-center justify-between">
                 Can you make private collections for brands or companies?
                 <ChevronDown className="w-5 h-5 text-[#ee6c4d] group-open:rotate-180 transition-transform" />
@@ -480,7 +542,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-4">Yes, we create exclusive series with your logo or corporate style.</p>
             </details>
 
-            <details className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow group">
+            <details className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all group">
               <summary className="font-bold text-[#3d5a80] cursor-pointer list-none flex items-center justify-between">
                 What materials are used for magnets and plates?
                 <ChevronDown className="w-5 h-5 text-[#ee6c4d] group-open:rotate-180 transition-transform" />
@@ -490,7 +552,7 @@ export default function HomePage() {
               </p>
             </details>
 
-            <details className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow group">
+            <details className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all group">
               <summary className="font-bold text-[#3d5a80] cursor-pointer list-none flex items-center justify-between">
                 Can you order different designs in one batch?
                 <ChevronDown className="w-5 h-5 text-[#ee6c4d] group-open:rotate-180 transition-transform" />
@@ -498,7 +560,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-4">Yes, we can combine several designs in one order.</p>
             </details>
 
-            <details className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow group">
+            <details className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-6 hover:bg-white/70 hover:shadow-xl transition-all group">
               <summary className="font-bold text-[#3d5a80] cursor-pointer list-none flex items-center justify-between">
                 Where do you ship from and do you export to Europe?
                 <ChevronDown className="w-5 h-5 text-[#ee6c4d] group-open:rotate-180 transition-transform" />
@@ -510,7 +572,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-8">
-            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+            <Button asChild size="lg" className="bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg">
               <a href="https://calendly.com/b2b-selectsignstudio/30min" target="_blank" rel="noopener noreferrer">
                 More questions? Contact us
               </a>
@@ -519,10 +581,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="h-px bg-[#ee6c4d] w-16 mx-auto"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-[#ee6c4d] to-transparent w-full max-w-md mx-auto"></div>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gray-50">
+      <section id="contact" className="py-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-[#3d5a80]">Contact Us</h2>
@@ -537,34 +599,34 @@ export default function HomePage() {
               <form
                 action="https://formspree.io/f/xqayjrgg"
                 method="POST"
-                className="space-y-6 bg-white p-8 rounded-lg border border-gray-200"
+                className="space-y-6 bg-white/60 backdrop-blur-md border border-white/20 shadow-lg p-8 rounded-3xl"
               >
                 <div>
                   <Label htmlFor="name" className="text-[#3d5a80]">
                     Name <span className="text-[#ee6c4d]">*</span>
                   </Label>
-                  <Input id="name" name="name" required className="mt-2" />
+                  <Input id="name" name="name" required className="mt-2 rounded-xl" />
                 </div>
 
                 <div>
                   <Label htmlFor="company" className="text-[#3d5a80]">
                     Company
                   </Label>
-                  <Input id="company" name="company" className="mt-2" />
+                  <Input id="company" name="company" className="mt-2 rounded-xl" />
                 </div>
 
                 <div>
                   <Label htmlFor="email" className="text-[#3d5a80]">
                     Email <span className="text-[#ee6c4d]">*</span>
                   </Label>
-                  <Input id="email" name="email" type="email" required className="mt-2" />
+                  <Input id="email" name="email" type="email" required className="mt-2 rounded-xl" />
                 </div>
 
                 <div>
                   <Label htmlFor="phone" className="text-[#3d5a80]">
                     Phone
                   </Label>
-                  <Input id="phone" name="phone" type="tel" className="mt-2" />
+                  <Input id="phone" name="phone" type="tel" className="mt-2 rounded-xl" />
                 </div>
 
                 <div>
@@ -577,18 +639,22 @@ export default function HomePage() {
                     required
                     placeholder="Tell us about your project ideas..."
                     rows={6}
-                    className="mt-2"
+                    className="mt-2 rounded-xl"
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-[#ee6c4d] hover:bg-[#d85a3a] text-white">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-[#ee6c4d] hover:bg-[#d85a3a] text-white rounded-full shadow-lg"
+                >
                   Send Request
                 </Button>
               </form>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg p-6 rounded-2xl hover:bg-white/70 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-white" />
@@ -602,7 +668,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg p-6 rounded-2xl hover:bg-white/70 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
                     <Send className="w-5 h-5 text-white" />
@@ -621,7 +687,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="bg-white/60 backdrop-blur-md border border-white/20 shadow-lg p-6 rounded-2xl hover:bg-white/70 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#ee6c4d] flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-white" />
